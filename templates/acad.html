@@ -1,0 +1,20 @@
+{% extends "base_acad.html" %} {% block main_content %}
+<ul class="nav nav-tabs">
+    <li role="presentation" class="active"><a href="/acad">updates</a>
+        <li>
+            <li role="presentation"><a href="/acad/info">info</a>
+                <li>
+</ul>
+<br> {% if entries %} {% autoescape false %} {% for entry in entries %}
+<div>
+    <a href="/entry?id={{ entry[0] }}">
+        <h2>{{ entry[1] }}</h2>
+    </a>
+    <br>
+    <p>by {{ entry[2] }} on {{ entry[3] }}</p>
+</div>
+<hr> {% endfor %} {% endautoescape %} {% else %}
+<div>
+    <h4>No posts to show</h4>
+</div>
+{% endif %} {% endblock %}

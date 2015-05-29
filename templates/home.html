@@ -1,0 +1,56 @@
+{% extends "base.html" %} 
+{% block content %}
+<header class="intro-header" style="background-image: url('/static/img/home-bg.jpg')">
+    <div class="container">
+        <div class="row">
+            <h1>&nbsp;</h1></div>
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="site-heading">
+                    <h1>SAC - IIT Mandi</h1>
+                    <hr class="small">
+                    <span class="subheading">Updates from far-away Kamand</span>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <h1>&nbsp;</h1></div>
+        <div class="row">
+            <h1>&nbsp;</h1></div>
+    </div>
+</header>
+<div class="container">
+    <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-7">
+            {% if entries %} 
+            {% autoescape false %} 
+            {% for entry in entries %}
+            <div>
+                <a href="entry?id={{ entry[0] }}">
+                    <h2>{{ entry[1] }}</h2>
+                </a>
+                <br>
+                <p>by {{ entry[2] }} on {{ entry[3] }}</p>
+            </div>
+            <hr> {% endfor %} 
+            {% endautoescape %} 
+            {% else %}
+            <div>
+                <h4>No posts to show</h4>
+            </div>
+            {% endif %}
+        </div>
+        <div class="col-md-1"></div>
+        <div class="col-md-2">
+            <h4>Upcoming Events</h4>
+            <hr>
+            <div class="nav nav-pills nav-stacked">
+                <li class="presentation"><a href="#">WINE</a></li>
+                <li class="presentation"><a href="#">Magazine</a></li>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+{% endblock %}

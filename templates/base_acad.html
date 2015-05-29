@@ -1,0 +1,45 @@
+{% extends "base.html" %} {% block content %}
+<header class="intro-header" style="background-image: url('/static/img/acad.jpg')">
+    <div class="container">
+        <div class="row">
+            <h1>&nbsp;</h1></div>
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="site-heading">
+                    <h1>Academics Society</h1>
+                    <hr class="small">
+                    <span class="subheading">Critically Engaged</span>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <h1>&nbsp;</h1></div>
+        <div class="row">
+            <h1>&nbsp;</h1></div>
+    </div>
+</header>
+<div class="container">
+    <div class="row">
+        <div class="col-md-8">
+            {% block main_content %} {% endblock %}
+        </div>
+        <div class="col-md-1"></div>
+        <div class="col-md-3">
+            <!-- <h4><a href="#">Our Clubs</a></h4>
+            <div class="nav nav-pills nav-stacked">
+                <li class="presentation"><a href="#">EDLS</a></li>
+                <li class="presentation"><a href="#">Magazine Section</a></li>
+            </div>
+            <hr> -->
+            <h4><a href="#">Other Societies</a></h4>
+            <div class="nav nav-pills nav-stacked">
+                <li class="presentation"><a href="/tech">Technical Society</a></li>
+                <li class="presentation"><a href="/cult">Cultural Society</a></li>
+                <li class="presentation"><a href="/lit">Literary Society</a></li>
+                <li class="presentation"><a href="/sports">Sports Society</a></li>
+                <li class="presentation"><a href="#">Research Society</a></li>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
